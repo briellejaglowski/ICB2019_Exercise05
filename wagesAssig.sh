@@ -14,5 +14,5 @@ task3=$(cat $1 | sed '1d' | cut -d , -f 1,2,4 | sort -t "," -k3,3 | tail | grep 
 echo "3: $task3"
 #Task 3
 val16=$(cat $1 | grep -E "[a-z]+,[0-9],16," | sort -n -t "," -k4 | head -n 1 | cut -d , -f 4)
-val1212yrs=$(cat $1 | grep -E "[a-z]+,[0-9],12," | sort -n -t "," -k4 | head -n 1 | cut -d , -f 4)
+val12=$(cat $1 | grep -E "[a-z]+,[0-9],12," | sort -n -t "," -k4 | head -n 1 | cut -d , -f 4)
 echo "$val16-$val12"
